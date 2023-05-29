@@ -1,0 +1,32 @@
+.promotion {
+  background-color: $color;
+  padding: 20px 0;
+  display: flex;
+  text-align: center;
+  overflow-x: hidden;
+  h3, h4 {
+    min-width: 100vw;
+    font-size: 0.8rem;
+    font-weight: 100;
+    
+  }
+  &__1 {
+    animation: altern-text 8s linear infinite;
+  }
+  &__2 {
+    animation: altern-text 8s linear infinite;
+
+  }
+}
+
+@keyframes altern-text {
+  0%, 30% {
+    transform: translateX(0);
+  }
+  34%, 65% {
+    transform: translateX(-100vw);
+  }
+  70%, 100% {
+    transform: translateX(0);
+  }
+}

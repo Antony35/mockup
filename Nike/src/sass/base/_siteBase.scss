@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+* a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-size: 18px;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  border-radius: 20rem;
+  padding: 16px;
+  font-size: 1rem;
+}

@@ -1,0 +1,43 @@
+nav {
+  margin: 10px 35px;
+  display: flex;
+  justify-content: space-between;
+  > img {
+    display: block;
+    max-width: 45px;
+  }
+  .nav-elem {
+    padding-left: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .recherche {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  img {
+    max-width: 15px;
+    &:nth-child(0n+1) {
+      position: relative;
+      left: 45px;
+    }
+    &:nth-child(0n+4) {
+      position: relative;
+      min-width: 25px;
+    }
+  }
+  input {
+    background-color: $color;
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: none;
+    opacity: .5;
+    font-size: 1rem;
+  }
+ }
+
+
+}

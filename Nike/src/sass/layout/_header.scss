@@ -1,0 +1,24 @@
+header {
+  background-color: $color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  .mini-logo {
+    display: flex;
+    gap: 20px;
+    img {
+      max-height: 30px;
+    }
+  }
+  .nav-1 {
+    display: flex;
+    justify-content: space-around;
+    span {
+      background-color: black;
+      display: block;
+      width: 1px;
+      margin: 0 10px;
+    }
+  }
+}
