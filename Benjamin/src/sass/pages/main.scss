@@ -1,0 +1,108 @@
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  &__name, &__job {
+    display: flex;
+    white-space: nowrap;
+    border-bottom: $border;
+    h1, h2 {
+      padding: 0 10px;
+      font-weight: 100;
+      letter-spacing: .2rem;
+      font-size: 4rem;
+      animation: scroll-txt infinite linear 4s reverse;
+    }
+    h2 {
+      font-size: 2.5rem;
+      animation: scroll-txt infinite linear 10s;
+    }
+    h1:nth-child(even), h2:nth-child(even) {
+      color: $primary;
+      text-shadow: 1px 1px 3px $secondary;
+    }
+  }
+}
+
+@keyframes scroll-txt {
+  0% {transform: translateX(0);}
+  100% {transform: translate(-200%);}
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //screen-size - border - font-size - margin-body
+    min-height: calc(100vh - 20px - 7.5rem - 40px);
+    @include big-screen {
+      min-height: calc(100vh - 20px - 7.5rem - 100px);
+      flex-direction: row-reverse;
+    }
+  .presentation {
+    margin: 30px 0 18vh 0;
+    display: flex;
+    flex-direction: column;
+    @include big-screen {
+      margin: 0;
+    }
+    p, a {
+      max-width: 400px;
+      padding: 0 10px;
+      margin: 5px 0;
+      @include big-screen {
+        margin: 10px 75px 10px 0;
+      }
+    }
+    a {
+      color: $secondary;
+      text-decoration: none;
+      img {
+        max-width: 20px;
+      }
+    }
+  }
+  .sphere-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    @include big-screen {
+      align-self: flex-end;
+    }
+    width: 50%;
+    &__big, &__small {
+      border-radius: 100rem;
+      background-color: $secondary;
+      position: absolute;
+    }
+    &__big {
+      z-index: 0;
+      width: 70vw;
+      height: 70vw;
+      bottom: 2vh;
+      @include big-screen {
+        width: 25vw;
+        height: 25vw;
+        margin-left: -20%;
+      }
+    }
+    &__small {
+      z-index: 2;
+      width: 20px;
+      height: 20px;
+      margin-bottom: 5%;
+      margin-left: -3%;
+      background-color: $secondary;
+    }
+    img {
+      position: relative;
+      z-index: 1;
+      max-width: 80vw;
+      @include big-screen {
+        margin-left: -20%;
+        max-width: 30vw;
+      }
+    }
+  }
+}

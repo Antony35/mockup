@@ -1,0 +1,16 @@
+{
+  "name": "benjamin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/sass/index.scss:./public/css/stylesheet.css --style compressed",
+    "prefix": "postcss ./public/css/stylesheet.css --use autoprefixer -d ./public/css/prefixed"
+  },
+  "author": "Antony Huart",
+  "license": "ISC",
+  "browserslist": "last 4 version",
+  "description": "landing page Benjamin Code",
+  "dependencies": {
+    "fuser": "^2.0.0"
+  }
+}
